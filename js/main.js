@@ -1,4 +1,4 @@
-/* TABEWISE site script: language switch (Japanese default), mobile menu, contact link. */
+/* TabeWise site script: language switch (Japanese default), mobile menu, contact link. */
 (function () {
   'use strict';
 
@@ -13,7 +13,7 @@
 
   /* ------------------------------------------------------------------
      Android download. While APK_URL is empty, every download button is
-     replaced by a "coming soon" message. When a verified TABEWISE APK
+     replaced by a "coming soon" message. When a verified TabeWise APK
      exists, upload it and set its relative path here, for example
      'Android/TABEWISE.apk'. Do not point this at a file that is not there.
      ------------------------------------------------------------------ */
@@ -24,17 +24,17 @@
 
   var META = {
     ja: {
-      title: 'TABEWISE（タベワイズ）｜かしこく食べる。もっと知る。',
-      desc: 'TABEWISE（タベワイズ）は、商品情報をわかりやすくすることで、毎日の選択をもっと賢くする、日本発の暮らしの情報サービス。まずは食品のスキャンから。',
+      title: 'TabeWise（タベワイズ）｜かしこく食べる。もっと知る。',
+      desc: 'TabeWise（タベワイズ）は、商品情報をわかりやすくすることで、毎日の選択をもっと賢くする、日本発の暮らしの情報サービス。まずは食品のスキャンから。',
       og: '商品情報をわかりやすくして、毎日の選択をもっと賢く。日本発の暮らしの情報サービス。',
-      alt: 'TABEWISE（タベワイズ）：かしこく食べる。もっと知る。',
+      alt: 'TabeWise（タベワイズ）：かしこく食べる。もっと知る。',
       locale: 'ja_JP'
     },
     en: {
-      title: 'TABEWISE (タベワイズ) | Eat Smart. Know Better.',
-      desc: 'TABEWISE (タベワイズ) is a Japan-first lifestyle discovery platform that makes product information easier to understand, so everyday choices get smarter. It starts with food scanning.',
+      title: 'TabeWise (タベワイズ) | Eat Smart. Know Better.',
+      desc: 'TabeWise (タベワイズ) is a Japan-first lifestyle discovery platform that makes product information easier to understand, so everyday choices get smarter. It starts with food scanning.',
       og: 'Product information made easier to understand, for smarter everyday choices. A Japan-first lifestyle discovery platform.',
-      alt: 'TABEWISE (タベワイズ): Eat Smart. Know Better.',
+      alt: 'TabeWise (タベワイズ): Eat Smart. Know Better.',
       locale: 'en_US'
     }
   };
@@ -116,7 +116,7 @@
   if (link && pending && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(CONTACT_EMAIL)) {
     doc.querySelectorAll('.contact-soon').forEach(function (e) { e.hidden = true; });
     doc.querySelectorAll('.contact-live').forEach(function (e) { e.hidden = false; });
-    link.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('TABEWISE enquiry');
+    link.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('TabeWise enquiry');
     link.hidden = false;
     pending.hidden = true;
   }

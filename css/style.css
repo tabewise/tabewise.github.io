@@ -123,7 +123,7 @@
   /* Sakura app motifs */
   .waves{background-image:radial-gradient(circle at 50% 100%,transparent 0 18px,rgba(247,169,198,.35) 18px 20px,transparent 20px 28px,rgba(247,169,198,.3) 28px 30px,transparent 30px);background-size:48px 24px}
   .bloom{position:absolute;pointer-events:none;font-size:3rem;filter:drop-shadow(0 4px 6px rgba(201,36,92,.2))}
-  .tagline{font-size:.8rem;letter-spacing:.22em;font-weight:700;color:var(--rose);text-transform:uppercase}
+  .tagline{font-size:.8rem;letter-spacing:.22em;font-weight:700;color:var(--rose);text-transform:none}
   .tagline b{letter-spacing:.35em;font-weight:500;font-size:.7em;margin-left:6px}
   .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;align-items:start;margin-top:32px}
   .shot{background:var(--card);border:6px solid var(--pink);border-radius:32px;overflow:hidden;box-shadow:var(--shadow)}
@@ -131,7 +131,7 @@
   .cap{text-align:center;color:var(--muted);font-size:.9rem;margin-top:10px}
 
 
-/* ---- TABEWISE additions ---- */
+/* ---- TabeWise additions ---- */
 .tight{padding-top:0}
 .skip{position:absolute;left:-999px;top:8px;background:var(--rose);color:#fff;padding:10px 16px;border-radius:10px;z-index:50}
 .skip:focus{left:8px}
