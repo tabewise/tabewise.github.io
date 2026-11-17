@@ -25,8 +25,8 @@
   var META = {
     ja: {
       title: 'TABEWISE（タベワイズ）｜かしこく食べる。もっと知る。',
-      desc: 'TABEWISE（タベワイズ）は、商品情報をわかりやすくすることで、毎日のより賢い選択をサポートする、日本発のライフスタイル・ディスカバリー。まずは食品のスキャンから。',
-      og: '商品情報をわかりやすくして、毎日の選択をもっと賢く。日本発のライフスタイル・ディスカバリー。',
+      desc: 'TABEWISE（タベワイズ）は、商品情報をわかりやすくすることで、毎日の選択をもっと賢くする、日本発の暮らしの情報サービス。まずは食品のスキャンから。',
+      og: '商品情報をわかりやすくして、毎日の選択をもっと賢く。日本発の暮らしの情報サービス。',
       alt: 'TABEWISE（タベワイズ）：かしこく食べる。もっと知る。',
       locale: 'ja_JP'
     },
@@ -114,6 +114,8 @@
   var link = doc.getElementById('contact-link');
   var pending = doc.getElementById('contact-pending');
   if (link && pending && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(CONTACT_EMAIL)) {
+    doc.querySelectorAll('.contact-soon').forEach(function (e) { e.hidden = true; });
+    doc.querySelectorAll('.contact-live').forEach(function (e) { e.hidden = false; });
     link.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('TABEWISE enquiry');
     link.hidden = false;
     pending.hidden = true;
