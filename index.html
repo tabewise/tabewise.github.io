@@ -42,7 +42,7 @@
       </ul>
     </nav>
     <div class="lang" role="group" aria-label="Language / 言語"><button type="button" data-lang="ja" aria-pressed="true">日本語</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
-    <a class="btn btn-primary nav-dl" href="Android/HalalLensJapan.apk" download data-ja="APKを入手">Get the APK</a>
+    <span class="btn btn-soft is-disabled nav-dl apk-soon" role="note" aria-disabled="true" aria-label="Android app coming soon" data-aria-ja="Android版は近日公開" data-ja="近日公開">Coming soon</span><a class="btn btn-primary nav-dl apk-live" href="#download" hidden download data-ja="APKを入手">Get the APK</a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -58,11 +58,11 @@
     <h1 data-ja="<span class='nb'>かしこく食べる。</span><em>もっと知る。</em>">Eat Smart. <em>Know Better.</em></h1>
     <p class="lead" data-ja="TABEWISEは、商品情報をわかりやすくすることで、毎日のより賢い選択をサポートします。まずは食品から。ラベルをスキャンして、中身を知ることから始めます。">TABEWISE helps people make smarter everyday choices by making product information easier to understand. It starts with food: scan a label and see what is inside.</p>
     <div class="cta">
-      <a class="btn btn-primary" href="Android/HalalLensJapan.apk" download data-ja="Android版（APK）をダウンロード">Download the Android APK</a>
+      <span class="btn btn-primary is-disabled apk-soon" role="note" aria-disabled="true" data-ja="Android版は近日公開">Android app coming soon</span><a class="btn btn-primary apk-live" href="#download" hidden download data-ja="Android版（APK）をダウンロード">Download the Android APK</a>
       <a class="btn btn-ghost" href="#scan" data-ja="できることを見る">See what it does</a>
     </div>
     <div class="status-row">
-      <div class="status-card"><span class="st st-now" data-ja="現在利用可能">Available now</span><p data-ja="ハラール判定、原材料の説明、アレルゲン表示">Halal screening, ingredient explanations, allergen display</p></div>
+      <div class="status-card"><span class="st st-now" data-ja="アプリの現行版にあり">In the current app build</span><p data-ja="ハラール判定、原材料の説明、アレルゲン表示">Halal screening, ingredient explanations, allergen display</p></div>
       <div class="status-card"><span class="st st-plan" data-ja="今後の予定">Planned</span><p data-ja="ヴィーガン・ベジタリアン判定、栄養情報">Vegan and vegetarian checks, nutrition information</p></div>
     </div>
   </div>
@@ -107,15 +107,19 @@
 </section>
 
 <!-- 4. Screenshots -->
+<!-- SCREENSHOT SLOTS: the earlier screenshots showed the previous product name and were removed.
+     When verified TABEWISE screenshots exist, replace each .shot-slot's contents with, for example:
+     <img src="images/home.jpg" width="900" height="1870" loading="lazy" alt="..." data-alt-ja="...">
+     (portrait, about 9:19; keep both the English alt and data-alt-ja). -->
 <section id="screens" class="tight">
   <div class="wrap">
     <span class="eyebrow" data-ja="アプリの画面">App screens</span>
-    <h2 data-ja="現在のAndroid版の画面">Screens from the current Android build</h2>
-    <p class="lead" data-ja="以下は現在のAndroid版の画面で、旧名称「Halal Lens Japan」のまま表示されています。TABEWISEへのリブランドに合わせて、順次更新する予定です。">These screens come from the current Android build, which still shows its earlier name, Halal Lens Japan. They will be updated with the TABEWISE rebrand.</p>
+    <h2 data-ja="アプリの画面は準備中です">App screens are on the way</h2>
+    <p class="lead" data-ja="TABEWISEとしての新しい画面を確認でき次第、ここに掲載します。">Screens of the TABEWISE app will appear here once they have been verified.</p>
     <div class="shots">
-      <figure><div class="shot"><img src="images/home.jpg" width="900" height="1870" loading="lazy" alt="Home screen: scan a label, how it works, and recent scans" data-alt-ja="ホーム画面：ラベルのスキャン、使い方、最近のスキャン"></div><figcaption class="cap" data-ja="ホーム">Home</figcaption></figure>
-      <figure><div class="shot"><img src="images/result.jpg" width="900" height="1870" loading="lazy" alt="Result screen showing No concern identified, with a note that it is not a halal certification" data-alt-ja="結果画面：「懸念は確認されませんでした」の表示と、ハラール認証ではない旨の注意書き"></div><figcaption class="cap" data-ja="結果画面。ハラール認証ではない旨の注意付き">Result, with a “not a halal certification” note</figcaption></figure>
-      <figure class="wide"><div class="shot"><img src="images/settings.jpg" width="1400" height="1400" loading="lazy" alt="Settings screens with theme choices and English and Japanese language options" data-alt-ja="設定画面：テーマの選択と、英語・日本語の言語設定"></div><figcaption class="cap" data-ja="設定：テーマと言語（English / 日本語）">Settings: themes and language (English / 日本語)</figcaption></figure>
+      <figure><div class="shot-slot" role="img" aria-label="Home screen: screenshot coming soon" data-aria-ja="ホーム画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><figcaption class="cap" data-ja="ホーム">Home</figcaption></figure>
+      <figure><div class="shot-slot" role="img" aria-label="Result screen: screenshot coming soon" data-aria-ja="結果画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><figcaption class="cap" data-ja="結果画面">Result</figcaption></figure>
+      <figure><div class="shot-slot" role="img" aria-label="Settings screen: screenshot coming soon" data-aria-ja="設定画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><figcaption class="cap" data-ja="設定">Settings</figcaption></figure>
     </div>
   </div>
 </section>
@@ -130,7 +134,7 @@
     <div class="legends">
       <div class="legend">
         <h3 data-ja="機能の状況">Feature status</h3>
-        <p><span class="st st-now" data-ja="利用可能">Available</span> <span data-ja="現在のAndroid版で使えます。" class="lg">In the current Android build.</span></p>
+        <p><span class="st st-now" data-ja="利用可能">Available</span> <span data-ja="アプリの現行版に備わっています。ただしAndroid版の公開は準備中で、まだダウンロードできません。" class="lg">In the current app build. The Android download is not published yet, so it cannot be downloaded today.</span></p>
         <p><span class="st st-part" data-ja="一部利用可能">Partly available</span> <span data-ja="一部のみ。内容は今後見直します。" class="lg">Some of it works; more is planned.</span></p>
         <p><span class="st st-plan" data-ja="予定">Planned</span> <span data-ja="まだ使えません。" class="lg">Not available yet.</span></p>
       </div>
@@ -149,7 +153,7 @@
       <div class="card"><div class="ico" style="background:var(--lav)" aria-hidden="true">🌱</div><h4 data-ja="ヴィーガン">Vegan</h4><span class="st st-plan" data-ja="予定">Planned</span><p data-ja="ラベルから読み取れた動物由来の原材料を知らせる機能を計画しています。まだ利用できません。">Planned: pointing out animal-derived ingredients that can be read from a label. Not available yet.</p></div>
       <div class="card"><div class="ico" style="background:var(--peach)" aria-hidden="true">🥕</div><h4 data-ja="ベジタリアン">Vegetarian</h4><span class="st st-plan" data-ja="予定">Planned</span><p data-ja="読み取れた原材料から、ベジタリアンに適合しそうかどうかを示す機能を計画しています。まだ利用できません。">Planned: showing whether the ingredients that can be read suggest a vegetarian-compatible product. Not available yet.</p></div>
     </div>
-    <h4 class="mini" data-ja="ハラール判定の5つの結果（現在利用可能）">The five halal screening results (available today)</h4>
+    <h4 class="mini" data-ja="ハラール判定の5つの結果（アプリの現行版）">The five halal screening results (current app build)</h4>
     <div class="slider" tabindex="0" aria-label="Halal screening results" data-aria-ja="ハラール判定の結果">
       <div class="slide s1"><div class="ic" aria-hidden="true">🚫</div><h5>HARAM</h5><p data-ja="文字が、ドラフトの規則で禁止とされる原材料に一致しました。">The text matches an ingredient the draft rules treat as prohibited.</p></div>
       <div class="slide s2"><div class="ic" aria-hidden="true">⚠️</div><h5>MASHBOOH / QUESTIONABLE</h5><p data-ja="確認が必要です。たとえば、原材料の由来が書かれていない場合です。">Needs checking, for example when the source of an ingredient is not stated.</p></div>
@@ -198,7 +202,7 @@
 <section id="features" class="tight">
   <div class="wrap">
     <span class="eyebrow" data-ja="機能">Features</span>
-    <h2 data-ja="現在のAndroid版でできること">What the current Android build does</h2>
+    <h2 data-ja="アプリの現行版でできること">What the current app build does</h2>
     <div class="svc three">
       <div class="card"><div class="ico" style="background:var(--pink)" aria-hidden="true">📷</div><h3 data-ja="ラベルのスキャン">Label scanning</h3><p data-ja="カメラで日本語の原材料表示を読み取ります。文字認識は端末内で行われ、写真はアップロードされません。読み取りの精度は、ラベルの状態によって変わります。">Read a Japanese ingredient list with the camera. Text recognition runs on your phone and photos are not uploaded. Accuracy depends on the condition of the label.</p></div>
       <div class="card"><div class="ico" style="background:var(--lav)" aria-hidden="true">▥</div><h3 data-ja="バーコード検索">Barcode lookup</h3><p data-ja="バーコードで Open Food Facts の商品情報を検索します。送信されるのはバーコード番号だけです。データが不完全な場合があります。">Look a product up in Open Food Facts by barcode. Only the barcode number is sent. The data can be incomplete.</p></div>
@@ -216,7 +220,7 @@
     <span class="eyebrow" data-ja="ロードマップ">Roadmap</span>
     <h2 data-ja="今あるもの、これから目指すもの">What exists, and where it is heading</h2>
     <div class="road">
-      <div class="col now"><span class="st st-now" data-ja="現在利用可能">Available now</span><ul>
+      <div class="col now"><span class="st st-now" data-ja="アプリの現行版にあり">In the current app build</span><ul>
         <li data-ja="ハラール判定（暫定）">Halal screening (preliminary)</li><li data-ja="原材料の説明">Ingredient explanations</li><li data-ja="アレルゲン表示">Allergen display</li><li data-ja="バーコード検索">Barcode lookup</li><li data-ja="英語・日本語対応">English and Japanese</li></ul></div>
       <div class="col next"><span class="st st-plan" data-ja="次に予定">Planned next</span><ul>
         <li data-ja="ヴィーガン・ベジタリアン判定">Vegan and vegetarian compatibility</li><li data-ja="栄養情報（エネルギー、たんぱく質、脂質、炭水化物、食塩相当量）">Nutrition information (calories, protein, fat, carbohydrates, salt equivalent)</li><li data-ja="添加物の専用表示">A dedicated additive view</li><li data-ja="TABEWISEへのリブランド">The TABEWISE rebrand of the app</li></ul></div>
@@ -237,7 +241,7 @@
         <li data-ja="<b>確認の補助にすぎません。</b>ハラール認証でも宗教的な裁定でもなく、認証書を検証することもできません。TABEWISEは公式な認証を提供しません。"><b>A screening aid only.</b> It is not halal certification or a religious ruling, and it cannot verify certificates. TABEWISE does not provide official certification.</li>
         <li data-ja="<b>分類は暫定的なものです。</b>ハラール判定のための辞書の項目はドラフトで、資格のあるハラール・アドバイザーによる確認・承認をまだ受けておらず、変更される可能性があります。"><b>Classifications are preliminary.</b> The entries behind halal screening are drafts that no qualified halal adviser has reviewed or approved yet, and they can change.</li>
         <li data-ja="<b>ラベルとデータは完全ではありません。</b>原材料の由来が書かれていないことは多く、Open Food Facts のデータは不完全または誤りの場合があります。文字認識は日本語を読み間違えることがあり、栄養成分表も例外ではありません。"><b>Labels and data are imperfect.</b> Labels often omit where an ingredient comes from, Open Food Facts data can be incomplete or wrong, and text recognition can misread Japanese, nutrition tables included.</li>
-        <li data-ja="<b>予定の機能はまだ使えません。</b>ヴィーガン・ベジタリアン判定、栄養情報などは計画中であり、現在のアプリでは提供されていません。"><b>Planned features are not available.</b> Vegan and vegetarian checks and nutrition information are planned and are not in the current app.</li>
+        <li data-ja="<b>予定の機能はまだ利用できません。</b>ヴィーガン・ベジタリアン判定、栄養情報などは計画中であり、現在のアプリでは提供されていません。"><b>Planned features are not available.</b> Vegan and vegetarian checks and nutrition information are planned and are not in the current app build.</li>
         <li data-ja="<b>アレルギーのある方へ。</b>アレルゲン情報はラベルの表示に基づきます。必ずパッケージの表示をご確認ください。"><b>If you have an allergy,</b> the allergen information is based on what the label states. Always read the package itself.</li>
         <li data-ja="<b>迷ったときは、</b>パッケージを確認し、メーカーや資格のあるアドバイザーに相談してください。"><b>When in doubt,</b> check the package and ask the manufacturer or a qualified adviser.</li>
       </ul>
@@ -250,10 +254,12 @@
   <div class="wrap">
     <div class="cta-banner">
       <span class="eyebrow on-pink" data-ja="ダウンロード">Download</span>
-      <h2 data-ja="現在のAndroid版を試す">Try the current Android build</h2>
-      <a class="btn btn-white" href="Android/HalalLensJapan.apk" download data-ja="Android版（APK）をダウンロード">Download the Android APK</a>
-      <p class="dl-note" data-ja="Android 7.0 以上に対応。APKを直接インストールするため、ブラウザからのインストールを許可するよう Android に求められる場合があります。">Works on Android 7.0 and up. Because this is a direct APK, Android may ask you to allow installs from your browser.</p>
-      <p class="dl-note" data-ja="現在配布しているのは「Halal Lens Japan」として公開された版で、ハラール判定に対応しています。今後、TABEWISEの名称と計画中の機能に順次移行します。iOS版は未発表です。">The build offered here is the release published as Halal Lens Japan, and it offers halal screening. It will move to the TABEWISE name and the planned features over time. An iOS version has not been announced.</p>
+      <h2 class="apk-soon" data-ja="Androidアプリは近日公開">The Android app is coming soon</h2>
+      <p class="dl-note apk-soon" data-ja="TABEWISEのAndroidアプリは、準備ができ次第こちらでご案内します。公開時期は未定です。">We will announce the TABEWISE Android app here when it is ready. No release date has been set.</p>
+      <span class="btn btn-white is-disabled apk-soon" role="note" aria-disabled="true" data-ja="近日公開">Coming soon</span>
+      <h2 class="apk-live" hidden data-ja="Android版を試す">Try the Android app</h2>
+      <a class="btn btn-white apk-live" href="#download" hidden download data-ja="Android版（APK）をダウンロード">Download the Android APK</a>
+      <p class="dl-note apk-live" hidden data-ja="Android 7.0 以上に対応。APKを直接インストールするため、ブラウザからのインストールを許可するよう Android に求められる場合があります。iOS版は未発表です。">Works on Android 7.0 and up. Because this is a direct APK, Android may ask you to allow installs from your browser. An iOS version has not been announced.</p>
     </div>
   </div>
 </section>

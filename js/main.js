@@ -11,6 +11,14 @@
      ------------------------------------------------------------------ */
   var CONTACT_EMAIL = '';
 
+  /* ------------------------------------------------------------------
+     Android download. While APK_URL is empty, every download button is
+     replaced by a "coming soon" message. When a verified TABEWISE APK
+     exists, upload it and set its relative path here, for example
+     'Android/TABEWISE.apk'. Do not point this at a file that is not there.
+     ------------------------------------------------------------------ */
+  var APK_URL = '';
+
   var KEY = 'tabewise-lang';
   var doc = document, root = doc.documentElement;
 
@@ -91,6 +99,15 @@
     });
     nav.addEventListener('click', function (e) { if (e.target.tagName === 'A') closeMenu(); });
     doc.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+  }
+
+  /* Android download buttons */
+  if (APK_URL && /^[\w./-]+\.apk$/i.test(APK_URL)) {
+    doc.querySelectorAll('.apk-soon').forEach(function (e) { e.hidden = true; });
+    doc.querySelectorAll('.apk-live').forEach(function (e) {
+      e.hidden = false;
+      if (e.tagName === 'A') e.setAttribute('href', APK_URL);
+    });
   }
 
   /* Contact route for investors / partners */

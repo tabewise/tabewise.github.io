@@ -245,3 +245,16 @@ section[id]{scroll-margin-top:84px}
 .nb{display:inline-block}
 html:lang(ja) body{word-break:auto-phrase}
 header.nav::before{content:"";position:absolute;inset:0 0 -14px;background:linear-gradient(#ffe1ea 55%,rgba(255,225,234,0));z-index:-1;pointer-events:none}
+
+/* coming-soon (disabled) buttons */
+.btn-soft{background:var(--card);color:var(--rose-d);border-color:var(--pink2)}
+.btn.is-disabled{cursor:not-allowed;box-shadow:none;transform:none!important;user-select:none}
+.btn-primary.is-disabled{background:#f1cfdb;color:#8a3a5c}
+.btn-white.is-disabled{background:rgba(255,255,255,.72);color:var(--rose-d)}
+.btn-soft.is-disabled{opacity:.9}
+
+/* screenshot slots */
+.shot-slot{aspect-ratio:9/19;max-width:300px;margin:0 auto;border:3px dashed var(--pink2);border-radius:32px;background:rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--muted);font-weight:600;text-align:center;padding:24px}
+.shot-slot .lens{width:72px;height:72px;opacity:.55}
+.shots figure{max-width:320px;margin:0 auto}
+.cta-banner .btn{margin-top:18px}
