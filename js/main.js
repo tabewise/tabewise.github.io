@@ -1,7 +1,7 @@
 (function(){
-  var KEY='hl-lang',doc=document,root=doc.documentElement;
-  var meta={ja:{t:'Halal Lens Japan｜日本のハラール好きのための食品ラベル確認アプリ',d:'日本のハラール好きのためのAndroidアプリ。原材料ラベルやバーコードを読み取り、確認が必要かもしれない原材料を知らせます。'},
-            en:{t:'Halal Lens Japan',d:'An Android app for halal lovers living in Japan. Scan a Japanese ingredient label or barcode and see which ingredients may need checking.'}};
+  var KEY='tw-lang',doc=document,root=doc.documentElement;
+  var meta={ja:{t:'TABEWISE｜タベワイズ — Eat Smart. Know Better.',d:'日本の食品ラベルをわかりやすく確認できるライフスタイルアプリ。Eat Smart. Know Better.'},
+            en:{t:'TABEWISE | タベワイズ — Eat Smart. Know Better.',d:'TABEWISE is a Japan-first lifestyle companion. Start with food label scanning and make more informed everyday choices.'}};
   function set(l){
     root.lang=l;
     doc.querySelectorAll('[data-ja]').forEach(function(e){
