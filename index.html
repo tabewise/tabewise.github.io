@@ -27,7 +27,8 @@
 <meta name="twitter:title" content="TabeWise（タベワイズ）｜かしこく食べる。もっと知る。">
 <meta name="twitter:description" content="商品情報をわかりやすくして、毎日の選択をもっと賢く。日本発の暮らしの情報サービス。">
 <meta name="twitter:image" content="https://shahidrox.github.io/wp-tabewise/images/og-image.png">
-<link rel="stylesheet" href="css/style.css?v=2">
+<script>try{var t=localStorage.getItem("tabewise-theme");if(/^(sky|matcha|dark)$/.test(t))document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="lens" viewBox="-80 -80 160 160"><g fill="none" stroke="#7A2840" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
@@ -152,10 +153,17 @@
     <span class="eyebrow" data-ja="アプリの画面">App screens</span>
     <h2 data-ja="アプリの画面は準備中です">App screens are on the way</h2>
     <p class="lead" data-ja="TabeWiseの画面の準備ができ次第、ここに掲載します。">Screens of the TabeWise app will appear here once they have been verified.</p>
+    <div class="theme-picker" role="radiogroup" aria-label="Theme" data-aria-ja="テーマ">
+      <button type="button" role="radio" aria-checked="true" data-theme-btn="sakura"><i class="sw" style="background:linear-gradient(135deg,#ffd9e3 50%,#c2185b 50%)"></i><span data-ja="桜">Sakura</span></button>
+      <button type="button" role="radio" aria-checked="false" data-theme-btn="sky"><i class="sw" style="background:linear-gradient(135deg,#d6edf3 50%,#1e6c87 50%)"></i><span data-ja="空">Sky</span></button>
+      <button type="button" role="radio" aria-checked="false" data-theme-btn="matcha"><i class="sw" style="background:linear-gradient(135deg,#e4f0d3 50%,#387028 50%)"></i><span data-ja="抹茶">Matcha</span></button>
+      <button type="button" role="radio" aria-checked="false" data-theme-btn="dark"><i class="sw" style="background:linear-gradient(135deg,#1f3050 50%,#a9c8f5 50%)"></i><span data-ja="ダーク">Dark</span></button>
+    </div>
+    <p class="theme-note" data-ja="テーマを選ぶと、このサイトとアプリ画面の表示が切り替わります。">Pick a theme to preview this site and the app screens in it.</p>
     <div class="shots">
-      <figure><div class="shot-slot" role="img" aria-label="Home screen: screenshot coming soon" data-aria-ja="ホーム画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><figcaption class="cap" data-ja="ホーム">Home</figcaption></figure>
-      <figure><div class="shot-slot" role="img" aria-label="Result screen: screenshot coming soon" data-aria-ja="結果画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><figcaption class="cap" data-ja="結果画面">Result</figcaption></figure>
-      <figure><div class="shot-slot" role="img" aria-label="Settings screen: screenshot coming soon" data-aria-ja="設定画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><figcaption class="cap" data-ja="設定">Settings</figcaption></figure>
+      <figure data-shot="home"><div class="shot-slot" role="img" aria-label="Home screen: screenshot coming soon" data-aria-ja="ホーム画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><img class="shot-img" hidden width="900" height="1870" loading="lazy" alt=""><figcaption class="cap" data-ja="ホーム">Home</figcaption></figure>
+      <figure data-shot="result"><div class="shot-slot" role="img" aria-label="Result screen: screenshot coming soon" data-aria-ja="結果画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><img class="shot-img" hidden width="900" height="1870" loading="lazy" alt=""><figcaption class="cap" data-ja="結果画面">Result</figcaption></figure>
+      <figure data-shot="settings"><div class="shot-slot" role="img" aria-label="Settings screen: screenshot coming soon" data-aria-ja="設定画面：画像は準備中"><svg class="lens" aria-hidden="true" focusable="false"><use href="#lens"/></svg><span data-ja="画像は準備中">Screenshot coming soon</span></div><img class="shot-img" hidden width="900" height="1870" loading="lazy" alt=""><figcaption class="cap" data-ja="設定">Settings</figcaption></figure>
     </div>
   </div>
 </section>
@@ -341,6 +349,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
 </body>
 </html>

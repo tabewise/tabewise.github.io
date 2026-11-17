@@ -74,6 +74,7 @@
       b.setAttribute('aria-pressed', String(b.dataset.lang === l));
     });
     try { localStorage.setItem(KEY, l); } catch (e) { /* storage unavailable */ }
+    if (typeof refreshShots === 'function') refreshShots();
   }
 
   var saved = 'ja';
@@ -83,6 +84,66 @@
   doc.querySelectorAll('.lang button').forEach(function (b) {
     b.addEventListener('click', function () { setLang(b.dataset.lang); });
   });
+
+
+  /* Theme switcher: re-colours the site and swaps the app screenshots.
+     Screens are looked up at images/screens/<theme>-<home|result|settings>.png
+     (portrait, about 9:19). Until a file exists the placeholder stays. */
+  var THEMES = {
+    sakura: { color: '#ffe1ea', en: 'Sakura', ja: '桜' },
+    sky:    { color: '#ddf0f6', en: 'Sky',    ja: '空' },
+    matcha: { color: '#eaf4dc', en: 'Matcha', ja: '抹茶' },
+    dark:   { color: '#0e1626', en: 'Dark',   ja: 'ダーク' }
+  };
+  var SHOTS = {
+    home:     { en: 'Home screen',     ja: 'ホーム画面' },
+    result:   { en: 'Result screen',   ja: '結果画面' },
+    settings: { en: 'Settings screen', ja: '設定画面' }
+  };
+  var THEME_KEY = 'tabewise-theme';
+  var theme = 'sakura';
+  try { var st = localStorage.getItem(THEME_KEY); if (THEMES[st]) theme = st; } catch (e) { /* ignore */ }
+
+  function refreshShots() {
+    if (!SHOTS || !THEMES) return; /* not initialised yet on first setLang */
+    var ja = root.lang === 'ja';
+    doc.querySelectorAll('figure[data-shot]').forEach(function (fig) {
+      var key = fig.dataset.shot, img = fig.querySelector('.shot-img'), slot = fig.querySelector('.shot-slot');
+      if (!img || !slot || !SHOTS[key]) return;
+      var t = THEMES[theme];
+      var alt = ja ? SHOTS[key].ja + '（' + t.ja + 'テーマ）' : SHOTS[key].en + ', ' + t.en + ' theme';
+      img.alt = alt;
+      var src = 'images/screens/' + theme + '-' + key + '.png';
+      if (img.getAttribute('data-src') === src) return;
+      img.setAttribute('data-src', src);
+      var probe = new Image();
+      probe.onload = function () {
+        if (img.getAttribute('data-src') !== src) return;
+        img.src = src; img.hidden = false; slot.hidden = true;
+      };
+      probe.onerror = function () {
+        if (img.getAttribute('data-src') !== src) return;
+        img.hidden = true; slot.hidden = false;
+      };
+      probe.src = src;
+    });
+  }
+
+  function applyTheme(name, save) {
+    if (!THEMES[name]) name = 'sakura';
+    theme = name;
+    if (name === 'sakura') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', name);
+    meta('meta[name="theme-color"]', 'content', THEMES[name].color);
+    doc.querySelectorAll('[data-theme-btn]').forEach(function (b) {
+      b.setAttribute('aria-checked', String(b.dataset.themeBtn === name));
+    });
+    if (save) { try { localStorage.setItem(THEME_KEY, name); } catch (e) { /* ignore */ } }
+    refreshShots();
+  }
+  doc.querySelectorAll('[data-theme-btn]').forEach(function (b) {
+    b.addEventListener('click', function () { applyTheme(b.dataset.themeBtn, true); });
+  });
+  applyTheme(theme, false);
 
   /* Mobile menu */
   var btn = doc.querySelector('.menu-btn');
