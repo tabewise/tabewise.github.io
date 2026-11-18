@@ -152,7 +152,7 @@ section[id]{scroll-margin-top:84px}
 .menu-btn[aria-expanded=true] span:nth-child(2){opacity:0}
 .menu-btn[aria-expanded=true] span:nth-child(3){top:21px;transform:rotate(-45deg)}
 @media(max-width:1440px){.nav-dl{display:none}}
-@media(max-width:1180px){
+@media(max-width:1200px){
   .nav .wrap{gap:10px}
   .nav .wrap .brand{margin-right:auto}
   .menu-btn{display:block}
