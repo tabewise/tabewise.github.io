@@ -320,3 +320,10 @@ h3.sub{margin:56px 0 8px;font-size:1.5rem;color:var(--ink)}
 :root[data-theme=dark] .s2 h5{color:#ffd27a}
 :root[data-theme=dark] .s3 h5{color:#a9c8f5}
 :root[data-theme=dark] .s4 h5{color:#b7db94}
+
+/* Collaborators section */
+#collaborators .feats{margin-top:26px}
+#collaborators .sub{margin:34px 0 12px}
+.collab-list{margin:0 0 18px;padding-left:1.3em;color:var(--ink)}.collab-list li{margin:6px 0}
+.collab-note{color:var(--muted);font-size:.92rem;margin:0 0 22px}
+#collaborators .pl{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:800;color:var(--rose);margin:0 0 14px;letter-spacing:-.01em}
