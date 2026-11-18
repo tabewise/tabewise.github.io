@@ -162,6 +162,46 @@
     doc.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
   }
 
+  /* Active navigation link: highlights the nav link of the section being read.
+     Works from clicks and from manual scrolling (IntersectionObserver), in both languages. */
+  var navLinks = doc.querySelectorAll('#site-nav a[href^="#"]');
+  var allSections = doc.querySelectorAll('main > section[id]');
+  function setActiveNav(id) {
+    navLinks.forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('active', on);
+      if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+    });
+  }
+  if (navLinks.length && allSections.length) {
+    var navIds = {};
+    navLinks.forEach(function (a) { navIds[a.getAttribute('href').slice(1)] = true; });
+    var order = Array.prototype.slice.call(allSections);
+    var inBand = {};
+    function updateNav() {
+      var cur = -1;
+      order.forEach(function (s, i) { if (inBand[s.id]) cur = i; });
+      if (window.innerHeight + window.scrollY >= doc.documentElement.scrollHeight - 2) cur = order.length - 1;
+      var id = '';
+      for (var i = cur; i >= 0; i--) { if (navIds[order[i].id]) { id = order[i].id; break; } }
+      setActiveNav(id);
+    }
+    nav && nav.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+      if (a) setActiveNav(a.getAttribute('href').slice(1));
+    });
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { inBand[en.target.id] = en.isIntersecting; });
+        updateNav();
+      }, { rootMargin: '-90px 0px -65% 0px', threshold: 0 });
+      order.forEach(function (s) { io.observe(s); });
+      window.addEventListener('scroll', function () {
+        if (window.innerHeight + window.scrollY >= doc.documentElement.scrollHeight - 2) updateNav();
+      }, { passive: true });
+    }
+  }
+
   /* Android download buttons */
   if (APK_URL && /^[\w./-]+\.apk$/i.test(APK_URL)) {
     doc.querySelectorAll('.apk-soon').forEach(function (e) { e.hidden = true; });
