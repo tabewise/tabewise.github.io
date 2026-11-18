@@ -324,3 +324,12 @@ h3.sub{margin:56px 0 8px;font-size:1.5rem;color:var(--ink)}
 /* Active navigation link (same look as the pressed language button, so it follows every theme) */
 .nav ul a.active{background:var(--rose);color:var(--on-rose)}
 .nav ul a.active:hover{background:var(--rose-d);color:var(--on-rose)}
+
+/* Collaborators section */
+#collaborators .feats{margin-top:26px}
+#collaborators .sub{margin:34px 0 12px}
+.collab-list{margin:0 0 18px;padding-left:1.3em;color:var(--ink)}.collab-list li{margin:6px 0}
+.collab-note{color:var(--muted);font-size:.92rem;margin:0 0 22px}
+#collaborators .pl{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:800;color:var(--rose);margin:0 0 14px;letter-spacing:-.01em}
+.collab-contact{margin-top:6px}.collab-contact p{margin:0 0 6px;color:var(--muted)}
+.collab-contact .mail{font-weight:800;font-size:1.15rem;color:var(--rose);text-decoration:underline;text-underline-offset:3px;word-break:break-all}
