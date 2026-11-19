@@ -360,3 +360,8 @@ h3.sub{margin:56px 0 8px;font-size:1.5rem;color:var(--ink)}
 .hero .eyebrow{font-size:.72rem}
 html:lang(ja) .hero .eyebrow{font-size:.98rem;letter-spacing:.04em}
 .hero .tagline b{margin-left:0;margin-right:10px}
+
+/* Footer legal links */
+.legal-links{display:flex;flex-wrap:wrap;gap:6px 22px;margin:22px 0 4px;padding-top:18px;border-top:1px solid var(--line)}
+.legal-links a{color:var(--muted);text-decoration:none;font-size:.9rem;font-weight:600}
+.legal-links a:hover{color:var(--rose);text-decoration:underline}
