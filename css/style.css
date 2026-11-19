@@ -359,3 +359,4 @@ h3.sub{margin:56px 0 8px;font-size:1.5rem;color:var(--ink)}
 .hero .tagline b{font-size:1.65em;letter-spacing:.2em;margin-left:10px;vertical-align:-.08em}
 .hero .eyebrow{font-size:.72rem}
 html:lang(ja) .hero .eyebrow{font-size:.98rem;letter-spacing:.04em}
+.hero .tagline b{margin-left:0;margin-right:10px}

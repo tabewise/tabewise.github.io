@@ -24,17 +24,17 @@
 
   var META = {
     ja: {
-      title: 'TabeWise（タベワイズ）｜かしこく食べる。もっと知る。',
-      desc: 'TabeWise（タベワイズ）は、商品情報をわかりやすくすることで、毎日の選択をもっと賢くする、日本発の暮らしの情報サービス。まずは食品のスキャンから。',
+      title: 'TabeWise（食べワイズ）｜かしこく食べる。もっと知る。',
+      desc: 'TabeWise（食べワイズ）は、商品情報をわかりやすくすることで、毎日の選択をもっと賢くする、日本発の暮らしの情報サービス。まずは食品のスキャンから。',
       og: '商品情報をわかりやすくして、毎日の選択をもっと賢く。日本発の暮らしの情報サービス。',
-      alt: 'TabeWise（タベワイズ）：かしこく食べる。もっと知る。',
+      alt: 'TabeWise（食べワイズ）：かしこく食べる。もっと知る。',
       locale: 'ja_JP'
     },
     en: {
-      title: 'TabeWise (タベワイズ) | Eat Smart. Know Better.',
-      desc: 'TabeWise (タベワイズ) is a Japan-first lifestyle discovery platform that makes product information easier to understand, so everyday choices get smarter. It starts with food scanning.',
+      title: 'TabeWise (食べワイズ) | Eat Smart. Know Better.',
+      desc: 'TabeWise (食べワイズ) is a Japan-first lifestyle discovery platform that makes product information easier to understand, so everyday choices get smarter. It starts with food scanning.',
       og: 'Product information made easier to understand, for smarter everyday choices. A Japan-first lifestyle discovery platform.',
-      alt: 'TabeWise (タベワイズ): Eat Smart. Know Better.',
+      alt: 'TabeWise (食べワイズ): Eat Smart. Know Better.',
       locale: 'en_US'
     }
   };
