@@ -333,3 +333,11 @@ h3.sub{margin:56px 0 8px;font-size:1.5rem;color:var(--ink)}
 #collaborators .pl{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:800;color:var(--rose);margin:0 0 14px;letter-spacing:-.01em}
 .collab-contact{margin-top:6px}.collab-contact p{margin:0 0 6px;color:var(--muted)}
 .collab-contact .mail{font-weight:800;font-size:1.15rem;color:var(--rose);text-decoration:underline;text-underline-offset:3px;word-break:break-all}
+
+/* Development status section */
+#status .lead{margin:0 0 10px}
+#status .status-cards{margin-top:26px}
+#status .card ul{margin:12px 0 0;padding-left:1.2em;color:var(--muted)}#status .card li{margin-bottom:6px}
+#status .card p+p,#status .card ul+p{margin-top:12px}
+#status .card .fine{margin-top:14px;font-size:.88rem}
+#status .status-foot{margin-top:30px}#status .status-foot .lead{margin:0 0 12px}
