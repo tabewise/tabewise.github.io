@@ -341,3 +341,6 @@ h3.sub{margin:56px 0 8px;font-size:1.5rem;color:var(--ink)}
 #status .card p+p,#status .card ul+p{margin-top:12px}
 #status .card .fine{margin-top:14px;font-size:.88rem}
 #status .status-foot{margin-top:30px}#status .status-foot .lead{margin:0 0 12px}
+#status .progress{height:10px;border-radius:999px;background:var(--line);overflow:hidden;margin:6px 0 6px}
+#status .progress .bar{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--cta-a),var(--cta-b))}
+#status .card .pct{font-weight:800;color:var(--rose);margin:0 0 12px;font-size:.95rem}
