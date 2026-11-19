@@ -344,3 +344,12 @@ h3.sub{margin:56px 0 8px;font-size:1.5rem;color:var(--ink)}
 #status .progress{height:10px;border-radius:999px;background:var(--line);overflow:hidden;margin:6px 0 6px}
 #status .progress .bar{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--cta-a),var(--cta-b))}
 #status .card .pct{font-weight:800;color:var(--rose);margin:0 0 12px;font-size:.95rem}
+
+/* Small phones (<=400px): keep the header on one line and let status chips wrap */
+@media(max-width:400px){
+  .nav .wrap{gap:6px}
+  .brand{padding:4px 10px 4px 6px}
+  .brand img{height:34px}
+  .lang button{padding:7px 9px;font-size:.78rem}
+  .st{white-space:normal;line-height:1.3}
+}
