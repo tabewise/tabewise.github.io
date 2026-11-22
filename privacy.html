@@ -39,17 +39,83 @@
 
 <main id="main" class="legal-page">
   <div class="wrap">
-    <div class="legal-card">
-      <span class="eyebrow">Legal</span>
-      <h1>Privacy Policy</h1>
-      <p class="legal-status" role="status"><i aria-hidden="true"></i><span>Status: Under Review</span></p>
-      <p>The TabeWise Privacy Policy is currently being prepared and reviewed. We are examining our application's data-handling practices and third-party services to ensure our privacy disclosures accurately explain how information is processed.</p><p>The final version will be published before the relevant subscription services become available.</p>
-      <p class="note">This page is a status notice. It is not the final Privacy Policy and has not been legally approved.</p>
+    <article class="legal-card legal-doc">
+      <span class="eyebrow">Legal · Privacy</span>
+      <h1>Privacy Notice (Draft)</h1>
+      <p class="legal-status" role="status"><i aria-hidden="true"></i><span>Status: Draft, under factual and legal review</span></p>
+      <p class="note">This draft describes the data practices currently identified in the TabeWise app source. It is not the final Privacy Policy, has not been legally approved, and must not be treated as a complete statement of all processing until the provider configuration, retention periods and legal disclosures have been verified.</p>
+      <p class="doc-meta">Draft updated: 23 November 2026 &nbsp;·&nbsp; Effective date: Not yet in force</p>
+      <nav class="toc" aria-label="Contents"><h2>Contents</h2><ol>
+        <li><a href="#controller">Who operates TabeWise</a></li><li><a href="#data">Information processed</a></li><li><a href="#purpose">Why information is processed</a></li><li><a href="#storage">Where information is stored and retention</a></li><li><a href="#providers">Third-party services</a></li><li><a href="#permissions">Device permissions</a></li><li><a href="#choices">Your choices and controls</a></li><li><a href="#children">Children</a></li><li><a href="#changes">Changes and contact</a></li><li><a href="#pending">Items still being verified</a></li>
+      </ol></nav>
+      <section class="doc-section" id="controller"><h2><span class="num">1.</span> Who operates TabeWise</h2>
+        <p>TabeWise (タベワイズ) is a Japan-first lifestyle information service. The app identifies its developer as the TABEWISE Team. The legal name, business status and address of the responsible operator have not yet been confirmed for this draft and must be added before this notice is finalised.</p>
+      </section>
+      <section class="doc-section" id="data"><h2><span class="num">2.</span> Information processed</h2>
+        <ul>
+          <li><strong>Label photos and camera input:</strong> when you scan a food label, the image is processed on your device for text recognition. The app's current implementation uses on-device text recognition. Temporary processing copies are removed after recognition. The label-scanning flow is designed not to upload the photo to TabeWise servers.</li>
+          <li><strong>Recognised text and scan results:</strong> the text recognised from a label, ingredient analysis and related result details may be saved in the app's local scan history and favourites on your device. The app also keeps locally cached product information.</li>
+          <li><strong>Barcode numbers:</strong> when you use barcode lookup, the barcode number is sent to Open Food Facts to request matching product information. Product details returned by that service may be cached locally.</li>
+          <li><strong>Translation:</strong> translation is performed on your device. The first time the feature is used, the app may download a language model from Google. The translation feature is intended to translate on-device rather than upload the label text for remote translation.</li>
+          <li><strong>Correction email:</strong> if you choose “Report a correction”, the app prepares an email for you to review and send using your email application. The draft can include the app version, screening result, rules version, flagged or unrecognised ingredients and recognised ingredient text. It is not sent by the app automatically; if you send it, the email and its contents are handled by your chosen email provider and the recipient.</li>
+          <li><strong>Subscription information:</strong> when subscription functionality is configured and available, the app connects to RevenueCat to manage purchase and entitlement status. The exact identifiers, transaction fields and retention settings must be confirmed against the production RevenueCat configuration before this notice is final.</li>
+          <li><strong>Promotion content:</strong> the app downloads promotion manifests and banner images from GitHub. The hosting provider may process ordinary connection information when your device requests these files.</li>
+        </ul>
+        <p>The app currently does not require a TabeWise account or sign-in for its core scanning features. This draft does not claim that no diagnostics, crash reporting or analytics are used; those integrations and their configuration still require a separate release audit.</p>
+      </section>
+      <section class="doc-section" id="purpose"><h2><span class="num">3.</span> Why information is processed</h2>
+        <p>The app processes the information above to recognise ingredient labels, provide ingredient explanations and screening results, retrieve product details by barcode, provide optional translation, keep scan history and favourites on your device, receive correction reports that you choose to send, display current promotions, and manage Premium access if subscriptions are enabled.</p>
+      </section>
+      <section class="doc-section" id="storage"><h2><span class="num">4.</span> Where information is stored and retention</h2>
+        <p>Scan history, favourites and cached product records are stored in the app's local database on your device. The app's user-facing description states that scan history is saved on this phone only; the current design does not provide TabeWise cloud synchronisation for this data.</p>
+        <p>Label photos are processed on-device and temporary processing copies are removed after recognition. Barcode lookup requests, downloads from third-party services, and any email you choose to send are subject to the relevant provider's systems and policies.</p>
+        <p>Exact retention periods for local caches, downloaded language models and banner files, provider-side request logs, RevenueCat records and emails sent by users have not yet been fully verified. The final policy will specify these details where applicable. Do not treat this draft as a promise of a particular deletion deadline.</p>
+      </section>
+      <section class="doc-section" id="providers"><h2><span class="num">5.</span> Third-party services</h2>
+        <ul>
+          <li><strong>Open Food Facts:</strong> receives the barcode number when you request a barcode lookup and provides community-maintained product information. See <a href="https://world.openfoodfacts.org/" rel="noopener noreferrer">Open Food Facts</a>.</li>
+          <li><strong>Google:</strong> may provide the downloadable language model used for on-device translation. The precise model-delivery endpoint and applicable provider terms are being verified.</li>
+          <li><strong>GitHub:</strong> hosts the promotion manifest and banner assets downloaded by the app. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">GitHub's Privacy Statement</a>.</li>
+          <li><strong>RevenueCat:</strong> supports subscription and entitlement management when subscriptions are enabled. See <a href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer">RevenueCat's Privacy Policy</a>. Apple or Google also processes store purchases under the applicable store terms and privacy policies.</li>
+          <li><strong>Your email provider:</strong> processes a correction report only if you choose to send the email draft using your email application.</li>
+        </ul>
+        <p>Third-party services process information under their own terms and privacy notices. The final policy will identify the exact service configuration and relevant data categories before subscriptions are activated.</p>
+      </section>
+      <section class="doc-section" id="permissions"><h2><span class="num">6.</span> Device permissions</h2>
+        <p>The app requests camera access for live label or barcode scanning. It also supports choosing an existing photo through the device's photo-selection flow. You can decline a permission; some scanning methods may then be unavailable, while manual ingredient entry remains an alternative where offered.</p>
+      </section>
+      <section class="doc-section" id="choices"><h2><span class="num">7.</span> Your choices and controls</h2>
+        <ul>
+          <li>You can choose whether to use barcode lookup, translation and the correction-email function.</li>
+          <li>You can manage or delete scan-history and favourite entries using the controls provided in the app.</li>
+          <li>You can manage camera and photo access through your device settings.</li>
+          <li>You can manage or cancel an app-store subscription through the relevant Apple or Google account settings. Removing the app does not itself cancel a store subscription.</li>
+        </ul>
+        <p>Requests about personal information, including requests under applicable Japanese privacy law, should be sent to the contact address below. The identity and address of the responsible operator and the formal request-handling process remain to be confirmed before this draft becomes final.</p>
+      </section>
+      <section class="doc-section" id="children"><h2><span class="num">8.</span> Children</h2>
+        <p>The minimum age for using TabeWise and any parental-consent requirements have not yet been determined. This section must be completed by the operator with qualified legal advice before the policy is finalised.</p>
+      </section>
+      <section class="doc-section" id="changes"><h2><span class="num">9.</span> Changes and contact</h2>
+        <p>This draft may be updated as the app and its service providers change. The date at the top indicates when this draft was last edited; it is not an effective date.</p>
+        <p>General app contact currently shown in the app: <a href="mailto:tabewise.jp@gmail.com">tabewise.jp@gmail.com</a>. The operator must confirm that this is the correct address for privacy requests and provide the required legal operator details before publication as a final policy.</p>
+      </section>
+      <section class="doc-section" id="pending"><h2><span class="num">10.</span> Items still being verified</h2>
+        <ul>
+          <li>Legal identity, status and address of the operator, and the applicable privacy-law disclosures.</li>
+          <li>Exact provider endpoints, request fields, identifiers, provider-side logs and retention settings for Open Food Facts, Google model delivery, GitHub and RevenueCat.</li>
+          <li>Whether any diagnostics, crash reporting or analytics SDKs or services are enabled in production.</li>
+          <li>Deletion and retention behaviour for local databases, caches, banner assets and downloaded language models, including app removal.</li>
+          <li>Children's privacy, formal request-handling procedures and the correct privacy contact.</li>
+          <li>Final consistency with Google Play and Apple App Store privacy disclosures.</li>
+        </ul>
+        <p class="note">This is a factual working draft, not legal advice or legal approval. Obtain a qualified Japanese privacy-law review before treating it as the official Privacy Policy or activating subscriptions.</p>
+      </section>
       <div class="legal-actions">
-        <a class="btn btn-primary" href="privacy-ja.html" lang="ja" hreflang="ja">日本語版を見る（プライバシーポリシー）</a>
+        <a class="btn btn-primary" href="privacy-ja.html" lang="ja" hreflang="ja">日本語版を見る（プライバシー通知）</a>
         <a class="btn btn-ghost" href="index.html">Back to the TabeWise homepage</a>
       </div>
-    </div>
+    </article>
   </div>
 </main>
 
