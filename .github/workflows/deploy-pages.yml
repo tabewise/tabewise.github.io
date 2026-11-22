@@ -29,6 +29,10 @@ jobs:
         with:
           enablement: true
 
+      - name: Record deployment timestamp
+        run: |
+          echo "{\"deployed_at\":\"$(date -u +'%Y-%m-%dT%H:%M:%SZ')\"}" > site-meta.json
+
       - name: Upload static website
         uses: actions/upload-pages-artifact@v3
         with:
