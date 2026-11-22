@@ -39,17 +39,83 @@
 
 <main id="main" class="legal-page">
   <div class="wrap">
-    <div class="legal-card">
-      <span class="eyebrow">法務情報</span>
-      <h1>プライバシーポリシー</h1>
-      <p class="legal-status" role="status"><i aria-hidden="true"></i><span>ステータス：制定・確認中</span></p>
-      <p>TabeWiseのプライバシーポリシーは現在、作成および確認を進めています。アプリのデータ取り扱い方法や第三者サービスについて確認し、情報の処理方法を正確に説明できるよう準備しています。</p><p>対象となるサブスクリプションサービスの提供開始前に、正式版を公開する予定です。</p>
-      <p class="note">このページは、現在の状況をお知らせするものです。プライバシーポリシーの正式版ではなく、法的な承認も受けていません。</p>
+    <article class="legal-card legal-doc">
+      <span class="eyebrow">法務情報・プライバシー</span>
+      <h1>プライバシーに関するお知らせ（ドラフト）</h1>
+      <p class="legal-status" role="status"><i aria-hidden="true"></i><span>ステータス：事実関係および法的内容を確認中</span></p>
+      <p class="note">このドラフトは、現在確認できているTabeWiseアプリのデータ取り扱いを説明するものです。正式なプライバシーポリシーではなく、法的な承認も受けていません。サービス提供者の設定、保存期間、法令上必要な開示事項を確認するまで、すべての処理を網羅した説明として扱わないでください。</p>
+      <p class="doc-meta">ドラフト更新日：2026年11月23日 &nbsp;·&nbsp; 施行日：未設定</p>
+      <nav class="toc" aria-label="目次"><h2>目次</h2><ol>
+        <li><a href="#controller">運営者について</a></li><li><a href="#data">取り扱う情報</a></li><li><a href="#purpose">利用目的</a></li><li><a href="#storage">保存場所と保存期間</a></li><li><a href="#providers">外部サービス</a></li><li><a href="#permissions">端末の権限</a></li><li><a href="#choices">利用者が選択・管理できること</a></li><li><a href="#children">お子さまの利用</a></li><li><a href="#changes">変更とお問い合わせ</a></li><li><a href="#pending">引き続き確認が必要な事項</a></li>
+      </ol></nav>
+      <section class="doc-section" id="controller"><h2><span class="num">1.</span> 運営者について</h2>
+        <p>TabeWise（タベワイズ）は、日本での暮らしに役立つ情報を提供するサービスです。アプリでは開発者名をTABEWISE Teamと表示しています。正式な運営者名、個人・法人の別、所在地は、このドラフトの段階では確定していないため、正式版の公開前に明記する必要があります。</p>
+      </section>
+      <section class="doc-section" id="data"><h2><span class="num">2.</span> 取り扱う情報</h2>
+        <ul>
+          <li><strong>食品ラベルの写真・カメラ入力：</strong>食品ラベルをスキャンすると、文字認識のために画像を端末内で処理します。現在の実装では端末内の文字認識を使用し、一時的な処理用コピーは認識後に削除します。ラベル読み取り機能では、写真をTabeWiseのサーバーへアップロードしない設計です。</li>
+          <li><strong>認識した文字とスキャン結果：</strong>ラベルから認識した文字、原材料の分析結果などは、端末内のスキャン履歴やお気に入りに保存される場合があります。商品情報のキャッシュも端末内に保存されます。</li>
+          <li><strong>バーコード番号：</strong>バーコード検索を利用すると、該当する商品情報を取得するため、バーコード番号がOpen Food Factsへ送信されます。取得した商品情報は端末内にキャッシュされる場合があります。</li>
+          <li><strong>翻訳：</strong>翻訳処理は端末内で行います。初回利用時などに、Googleから言語モデルをダウンロードする場合があります。翻訳機能は、ラベルの文字を遠隔サーバーへ送信して翻訳するのではなく、端末内で翻訳する設計です。</li>
+          <li><strong>訂正報告メール：</strong>「訂正を報告」を選ぶと、メールアプリで確認・送信できるメールの下書きを作成します。下書きには、アプリのバージョン、判定結果、ルールのバージョン、該当または未認識の原材料、認識した原材料の文字列などが含まれる場合があります。アプリが自動送信することはありません。利用者が送信した場合、その内容は利用者が選んだメールサービスおよび宛先によって取り扱われます。</li>
+          <li><strong>サブスクリプション情報：</strong>購入機能が設定され利用可能な場合、アプリは購入・権利状態の管理のためRevenueCatに接続します。識別子、取引情報の項目、保存設定の詳細は、本番用RevenueCat設定で確認する必要があります。</li>
+          <li><strong>プロモーション情報：</strong>アプリはGitHubからプロモーション情報のファイルやバナー画像をダウンロードします。端末からファイルをリクエストする際、ホスティング事業者が通常の接続情報を取り扱う場合があります。</li>
+        </ul>
+        <p>現在、基本的なスキャン機能の利用にTabeWise独自のアカウント登録やログインは必要ありません。このドラフトでは、診断情報・クラッシュレポート・分析ツールを一切使用していないとは断定しません。これらの連携と本番設定は、別途リリース前の確認が必要です。</p>
+      </section>
+      <section class="doc-section" id="purpose"><h2><span class="num">3.</span> 利用目的</h2>
+        <p>上記の情報は、原材料ラベルの文字認識、原材料の説明と判定結果の表示、バーコードによる商品情報の取得、任意の翻訳、端末内のスキャン履歴・お気に入りの保存、利用者が選択して送信する訂正報告の受信、プロモーションの表示、サブスクリプションが有効な場合のPremium利用権限の管理に使用します。</p>
+      </section>
+      <section class="doc-section" id="storage"><h2><span class="num">4.</span> 保存場所と保存期間</h2>
+        <p>スキャン履歴、お気に入り、取得した商品情報のキャッシュは、端末内のアプリ用データベースに保存されます。アプリ内の案内では、スキャン履歴はこの端末にのみ保存されると説明しています。現在の設計では、これらのデータをTabeWiseのクラウドと同期する機能はありません。</p>
+        <p>ラベル写真は端末内で処理し、一時的な処理用コピーは文字認識後に削除します。バーコード検索、外部サービスからのダウンロード、利用者が送信するメールは、それぞれのサービス提供者のシステムおよび方針の対象となります。</p>
+        <p>端末内キャッシュ、ダウンロードした言語モデルやバナー、外部サービス側のリクエストログ、RevenueCatの記録、利用者が送信したメールの正確な保存期間は、まだすべて確認できていません。該当する事項は正式版で明記します。このドラフトは、特定の期限までにすべての情報が削除されることを保証するものではありません。</p>
+      </section>
+      <section class="doc-section" id="providers"><h2><span class="num">5.</span> 外部サービス</h2>
+        <ul>
+          <li><strong>Open Food Facts：</strong>バーコード検索時にバーコード番号を受け取り、コミュニティが管理する商品情報を提供します。<a href="https://world.openfoodfacts.org/" rel="noopener noreferrer">Open Food Facts</a>をご覧ください。</li>
+          <li><strong>Google：</strong>端末内翻訳に使用する言語モデルのダウンロード元となる場合があります。モデル配信先の正確な接続先と適用される規約は確認中です。</li>
+          <li><strong>GitHub：</strong>アプリがダウンロードするプロモーション情報ファイルとバナー画像をホストします。<a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" rel="noopener noreferrer">GitHubプライバシーステートメント</a>をご覧ください。</li>
+          <li><strong>RevenueCat：</strong>サブスクリプションが有効な場合、購入と利用権限の管理を支援します。<a href="https://www.revenuecat.com/privacy/" rel="noopener noreferrer">RevenueCatのプライバシーポリシー</a>をご覧ください。AppleまたはGoogleも、各ストアの規約とプライバシーポリシーに基づいて購入を処理します。</li>
+          <li><strong>利用者のメールサービス：</strong>利用者がメールアプリで訂正報告の下書きを送信した場合、そのメールサービスが内容を取り扱います。</li>
+        </ul>
+        <p>外部サービスは、それぞれの規約とプライバシーに関する告知に従って情報を取り扱います。サブスクリプションを有効にする前に、実際のサービス設定と関連する情報の種類を確認します。</p>
+      </section>
+      <section class="doc-section" id="permissions"><h2><span class="num">6.</span> 端末の権限</h2>
+        <p>アプリは、ラベルやバーコードをカメラでスキャンするためにカメラへのアクセスを求めます。また、端末の写真選択機能から既存の写真を選ぶこともできます。権限を許可しない場合、一部のスキャン方法は利用できませんが、対応している画面では原材料を手入力できます。</p>
+      </section>
+      <section class="doc-section" id="choices"><h2><span class="num">7.</span> 利用者が選択・管理できること</h2>
+        <ul>
+          <li>バーコード検索、翻訳、訂正報告メールを利用するかどうかを選べます。</li>
+          <li>アプリ内の操作から、スキャン履歴やお気に入りを管理・削除できます。</li>
+          <li>カメラや写真へのアクセス権限は、端末の設定から管理できます。</li>
+          <li>アプリストアのサブスクリプションは、該当するAppleまたはGoogleアカウントの設定から管理・解約できます。アプリを削除しただけでは、ストアの定期購入は解約されません。</li>
+        </ul>
+        <p>個人情報に関するお問い合わせや、適用される日本の個人情報保護法令に基づく請求は、下記の連絡先へお送りください。正式な運営者情報と請求への対応手続きは、正式版の公開前に確定する必要があります。</p>
+      </section>
+      <section class="doc-section" id="children"><h2><span class="num">8.</span> お子さまの利用</h2>
+        <p>TabeWiseの最低利用年齢および保護者の同意が必要となる条件は、まだ決定していません。正式版の作成前に、運営者が法律専門家の助言を得てこの項目を確定する必要があります。</p>
+      </section>
+      <section class="doc-section" id="changes"><h2><span class="num">9.</span> 変更とお問い合わせ</h2>
+        <p>アプリや外部サービスの変更に応じて、このドラフトを更新する場合があります。ページ上部の日付はドラフトの更新日であり、施行日ではありません。</p>
+        <p>アプリに現在表示している一般お問い合わせ先：<a href="mailto:tabewise.jp@gmail.com">tabewise.jp@gmail.com</a>。正式なプライバシーポリシーとして公開する前に、このアドレスが個人情報に関する請求・お問い合わせ窓口として適切か、また運営者情報をどう表示するかを確認します。</p>
+      </section>
+      <section class="doc-section" id="pending"><h2><span class="num">10.</span> 引き続き確認が必要な事項</h2>
+        <ul>
+          <li>運営者の正式名称、個人・法人の区分、所在地、および適用される個人情報保護法令上の開示事項。</li>
+          <li>Open Food Facts、Googleのモデル配信、GitHub、RevenueCatについて、正確な接続先、送信項目、識別子、事業者側のログ、保存設定。</li>
+          <li>本番環境で診断情報、クラッシュレポート、分析用SDK・サービスが有効になっているか。</li>
+          <li>端末内データベース、キャッシュ、バナー、言語モデルの削除・保存の挙動（アプリ削除時を含む）。</li>
+          <li>子どものプライバシー、正式な請求対応手続き、個人情報に関する正しい連絡先。</li>
+          <li>Google PlayおよびApple App Storeのプライバシー開示との整合性。</li>
+        </ul>
+        <p class="note">これは事実関係を整理するための作業用ドラフトであり、法律上の助言や承認ではありません。正式なプライバシーポリシーとして扱う、またはサブスクリプションを有効にする前に、日本の個人情報保護法に詳しい専門家の確認を受けてください。</p>
+      </section>
       <div class="legal-actions">
-        <a class="btn btn-primary" href="privacy.html" lang="en" hreflang="en">View in English (Privacy Policy)</a>
+        <a class="btn btn-primary" href="privacy.html" lang="en" hreflang="en">English version (Privacy Notice)</a>
         <a class="btn btn-ghost" href="index.html">TabeWiseのホームページへ戻る</a>
       </div>
-    </div>
+    </article>
   </div>
 </main>
 
