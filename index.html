@@ -71,11 +71,10 @@
     <nav aria-label="Main" id="site-nav">
       <ul>
         <li><a href="#about" data-ja="TabeWiseについて">About</a></li>
-        <li><a href="#scan" data-ja="スキャン結果">Scan results</a></li>
+        <li><a href="#features" data-ja="機能">Features</a></li>
         <li><a href="#how" data-ja="使い方">How it works</a></li>
         <li><a href="#roadmap" data-ja="ロードマップ">Roadmap</a></li>
-        <li><a href="#partners" data-ja="事業パートナー">Partners</a></li>
-        <li><a href="#collaborators" data-ja="協力メンバー募集">Collaborators</a></li>
+        <li><a href="#faq" data-ja="よくある質問">FAQ</a></li>
       </ul>
     </nav>
     <div class="lang" role="group" aria-label="Language / 言語"><button type="button" data-lang="ja" aria-pressed="true">日本語</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
@@ -293,6 +292,23 @@
   </div>
 </section>
 
+<!-- Visitor FAQ: answers are limited to capabilities and policies confirmed in the current app build. -->
+<section id="faq" class="tight">
+  <div class="wrap">
+    <span class="eyebrow" data-ja="よくある質問">FAQ</span>
+    <h2 data-ja="よくあるご質問">Questions people often ask</h2>
+    <div class="rows">
+      <div class="row"><div><h4 data-ja="インターネット接続は必要ですか？">Does TabeWise work offline?</h4><p data-ja="ラベルのスキャンと内蔵辞書による確認はオフラインで利用できます。バーコード検索にはインターネット接続が必要です。">Label scanning and checks against the built-in dictionary work offline. Barcode lookup requires an internet connection.</p></div></div>
+      <div class="row"><div><h4 data-ja="日本語と英語に対応していますか？">Which languages are supported?</h4><p data-ja="現在のアプリビルドは日本語と英語に対応しています。">The current app build supports Japanese and English.</p></div></div>
+      <div class="row"><div><h4 data-ja="ハラール認証を確認できますか？">Does a result mean a product is halal-certified?</h4><p data-ja="いいえ。TabeWiseの食の適合性に関する結果は暫定的なスクリーニング情報です。公式な認証や宗教的な裁定ではなく、認証書の真正性を確認するものでもありません。">No. Dietary results are preliminary screening information. They are not official certification or a religious ruling, and the app does not authenticate certificates.</p></div></div>
+      <div class="row"><div><h4 data-ja="スキャンした写真はアップロードされますか？">Are scanned photos uploaded?</h4><p data-ja="文字認識は端末内で行われ、スキャン写真はアップロードされません。バーコード検索では、商品情報を照会するためバーコード番号がOpen Food Factsに送信されます。">Text recognition runs on your device and scan photos are not uploaded. For barcode lookup, the barcode number is sent to Open Food Facts to request product information.</p></div></div>
+      <div class="row"><div><h4 data-ja="アプリは無料ですか？">How much does the app cost?</h4><p data-ja="価格やサブスクリプションの購入条件はまだ発表していません。確定した情報は公開時にお知らせします。">Pricing and subscription purchase terms have not been announced. We will publish confirmed details when they are available.</p></div></div>
+      <div class="row"><div><h4 data-ja="いつダウンロードできますか？">When can I download it?</h4><p data-ja="アプリはまだ一般公開されておらず、公開日は未定です。準備が整い次第、このウェブサイトでお知らせします。">The app is not publicly released yet, and no release date has been set. We will share an update on this website when it is ready.</p></div></div>
+    </div>
+    <p class="fine" data-ja="ご利用前に、重要な注意点とプライバシーポリシーもご確認ください。">Please also read the important limitations and Privacy Policy before using the app.</p>
+  </div>
+</section>
+
 <!-- 12. Download -->
 <section id="download" class="tight">
   <div class="wrap">
@@ -394,7 +410,7 @@
         <a class="brand" href="#top" aria-label="TabeWise 食べワイズ"><img src="images/tabewise-logo-animated.svg" width="166" height="52" alt="食べワイズ TabeWise"></a>
         <p class="foot-p" data-ja="かしこく食べる。もっと知る。日本発の暮らしの情報サービス。まずは食品から。">Eat Smart. Know Better. A Japan-first lifestyle discovery platform, starting with food.</p>
       </div>
-      <div><h4 data-ja="ページ">Page</h4><ul><li><a href="#about" data-ja="TabeWiseについて">About</a></li><li><a href="#scan" data-ja="スキャン結果">Scan results</a></li><li><a href="#how" data-ja="使い方">How it works</a></li><li><a href="#roadmap" data-ja="ロードマップ">Roadmap</a></li></ul></div>
+      <div><h4 data-ja="ページ">Page</h4><ul><li><a href="#about" data-ja="TabeWiseについて">About</a></li><li><a href="#features" data-ja="機能">Features</a></li><li><a href="#how" data-ja="使い方">How it works</a></li><li><a href="#faq" data-ja="よくある質問">FAQ</a></li></ul></div>
       <div><h4 data-ja="案内">Info</h4><ul><li><a href="#limits" data-ja="重要な注意点">Limitations</a></li><li><a href="#download" data-ja="ダウンロード">Download</a></li><li><a href="#partners" data-ja="事業パートナー">Partners</a></li><li><a href="#collaborators" data-ja="協力メンバー募集">Collaborators</a></li></ul></div>
       <div><h4 data-ja="データ">Data</h4><p class="foot-p fsm"><a href="https://world.openfoodfacts.org/" rel="noopener">Open Food Facts</a><br><span data-ja="ODbLデータ。写真は CC BY-SA © Open Food Facts contributors。">ODbL data; photos CC BY-SA © Open Food Facts contributors.</span></p></div>
     </div>
@@ -404,6 +420,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=6"></script>
+<script src="js/main.js?v=7"></script>
 </body>
 </html>
