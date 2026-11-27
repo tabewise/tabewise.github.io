@@ -187,6 +187,8 @@ section[id]{scroll-margin-top:84px}
 .svc.three{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .svc .card h3,.svc .card h4{margin:0 0 .4em;font-size:1.2rem}
 .svc .card .st{margin-bottom:12px}
+/* TABEWISE-69: let long card labels wrap instead of overflowing narrow columns (<=400px has its own rule) */
+@media(min-width:401px){.svc .card .st{white-space:normal;line-height:1.3;padding-block:4px;border-radius:14px}}
 .card p{margin:0}
 
 /* legends */
